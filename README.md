@@ -18,13 +18,12 @@ chmod u+x linuxtips.sh
 ### Configure tips and configuration file
 ```
 mkdir /etc/linuxtips
-cp config.sh /etc/linuxtips/
 cp -r tips/ /var/tips/
 ```
 
 ### Configure script
 ```
 chmod +x show-tip.sh
-sudo cp show-tip.sh /etc/profile.d/
+cp show-tip.sh /etc/profile.d/
 source /etc/profile
 ```

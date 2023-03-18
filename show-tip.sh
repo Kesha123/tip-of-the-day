@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-config_file_path="/etc/linuxtips/config.sh"
+config_file_path="$HOME/tip-of-the-day/config.sh"
 
 source $config_file_path
 
