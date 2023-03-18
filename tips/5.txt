@@ -1,0 +1,15 @@
+Topic: vim
+Text editor that is commonly used on Unix-based systems.
+Steps:
+#open file in vim
+#edit text
+#used commands
+Commands:
+#i : Switches vim to insert mode, allowing you to insert text into the document.
+#esc : Returns vim to normal mode, allowing you to use other commands.
+#:w : Saves the current document.
+#:wq : Saves the current document and exits vim.
+#q! : Exits vim without saving any changes.
+#:set number : Displays line numbers in the document.
+#/pattern : Searches for a pattern in the document.
+#:%s/pattern/replacement/g : Replaces all occurrences of a pattern with a replacement string.

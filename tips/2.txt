@@ -1,0 +1,8 @@
+Topic: Stream redirect
+Stream redirection is a way to control where input and output data is sent when running command-line
+programs.
+#stdout
+#stdin
+Commands:
+#>; >>;
+#<;

@@ -1,0 +1,8 @@
+Topic: Bash Profile
+The bash profile is a shell script that is executed whenever you start a new interactive shell session in
+Bash
+Steps:
+#create script in .bashrc or .bash_profile
+#reload it
+Commands:
+#source ~/.bash_profile

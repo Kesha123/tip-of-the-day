@@ -1,0 +1,4 @@
+Topic: sudo
+Command that allows users to run commands with the privileges of a superuser or root user.
+Command:
+#sudo <command>

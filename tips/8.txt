@@ -1,0 +1,7 @@
+Topic: repository
+A software repository is a collection of software packages that are hosted in a central location and can
+be downloaded and installed onto a user's system.
+#official
+#third-party
+#community
+#software vendor

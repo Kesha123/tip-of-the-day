@@ -1,0 +1,4 @@
+Topic: man
+Utility that is used to display the manual pages for other commands and utilities.
+Commands:
+#man <utility-name>

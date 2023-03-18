@@ -1,0 +1,14 @@
+Topic: apt
+package management tool used in Debian-based Linux distributions.
+Tip:
+#use <apt update>; <apt-get update> before <apt install>
+Commands:
+#apt update : Updates the local package database with the latest available package information.
+#apt upgrade : Upgrades all currently installed packages to the latest available versions.
+#apt install <package_name> : Installs the specified package.
+#apt remove <package_name> : Removes the specified package.
+#apt search <package_name> : Searches for the specified package in the available package database.
+#apt list : Lists all installed packages on the system.
+#apt-cache show <package_name> : Displays information about the specified package.
+#apt-get autoremove : Removes any packages that were installed as dependencies but are no longer
+needed.

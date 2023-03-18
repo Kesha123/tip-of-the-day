@@ -1,0 +1,4 @@
+Topic: links
+Type of file that points to another file or directory on the file system
+Commands:
+#ln s <file> <linkedfile>

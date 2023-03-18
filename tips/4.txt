@@ -1,0 +1,5 @@
+Topic: egrep
+Command-line utility that is used to search files or input streams for text that matches a specified
+regular expression pattern.
+Command:
+#egrep ‘<pattern>’ source

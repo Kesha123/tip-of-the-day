@@ -1,0 +1,4 @@
+Topic: environment variables
+Environment variables are a set of named values.
+Commands:
+#export <NAMAE=value>
