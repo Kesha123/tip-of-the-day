@@ -15,13 +15,6 @@ cd tip-of-the-day
 chmod u+x linuxtips.sh
 ```
 
-### Configure script
-```
-chmod +x show-tip.sh
-sudo cp show-tip.sh /etc/profile.d/
-source /etc/profile
-```
-
 ### Configure tips and configuration file
 ```
 mkdir /etc/linuxtips
@@ -29,4 +22,9 @@ cp config.sh /etc/linuxtips/
 cp -r tips/ /var/tips/
 ```
 
-
+### Configure script
+```
+chmod +x show-tip.sh
+sudo cp show-tip.sh /etc/profile.d/
+source /etc/profile
+```
