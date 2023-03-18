@@ -1,5 +1,6 @@
 #!/bin/bash
 
+clear
 
 config_file_path="$HOME/tip-of-the-day/config.sh"
 
