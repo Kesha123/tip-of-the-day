@@ -9,7 +9,7 @@ cat $TIPS_PATH/$CONNECTION_TIMES.txt
 
 if [ "$CONNECTION_TIMES" -lt 10 ]; then
     t=$(($CONNECTION_TIMES + 1))
-    echo "CONNECTION_TIMES=$t" > $config_file_path
+    sed -i "s/CONNECTION_TIMES=.*/CONNECTION_TIMES=$t/" $config_file_path
 else
-    echo "CONNECTION_TIMES=1" > $config_file_path
+    sed -i "s/CONNECTION_TIMES=.*/CONNECTION_TIMES=$t/" $config_file_path
 fi
