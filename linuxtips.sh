@@ -6,7 +6,7 @@ while getopts 'eh:' OPTION; do
             sudo nano /etc/linuxtips/config.sh;;
 
         h)
-            echo "";;
+            echo "linuxtips -e to edit configuaration file.";;
 
         \?)
         echo "-h to get help." >&2
