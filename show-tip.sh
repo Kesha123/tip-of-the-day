@@ -84,7 +84,6 @@ if is_left; then
     show_next $NEXT_TIP
 else
     echo "No tips left. linuxtips -e to edit skipped tips."
-    exit 0
 fi
 
 option=""
@@ -95,7 +94,6 @@ do
         echo ""
     else
         echo "No tips left. linuxtips -e to edit skipped tips."
-        exit 0
     fi
 
     read -p 'n: next; p: previous; s: skip forever; q: quit: ' option
@@ -126,7 +124,6 @@ do
             else
                 clear
                 echo "No tips left. linuxtips -e to edit skipped tips."
-                exit 0
             fi;;
         q)
             echo "";;
