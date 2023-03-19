@@ -3,7 +3,7 @@
 while getopts 'eh:' OPTION; do
     case "$OPTION" in
         e)
-            nano /etc/linuxtips/config.sh;;
+            nano $HOME/tip-of-the-day/config.sh;;
 
         h)
             echo "linuxtips -e to edit configuaration file.";;
