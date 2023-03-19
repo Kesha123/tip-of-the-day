@@ -18,7 +18,7 @@ chmod u+x linuxtips.sh
 ### Configure tips and configuration file
 ```
 mkdir /etc/linuxtips
-cp -r tips/ /var/tips/
+cp -r tips/ /var/
 ```
 
 ### Configure script
