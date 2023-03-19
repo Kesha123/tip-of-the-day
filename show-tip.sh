@@ -1,12 +1,9 @@
 #!/bin/bash
 
-#config_file_path="$HOME/tip-of-the-day/config.sh"
-config_file_path="config.sh"
+config_file_path="$HOME/tip-of-the-day/config.sh"
 
 show_next () {
     clear
-    #config_file_path="$HOME/tip-of-the-day/config.sh"
-    config_file_path="config.sh"
 
     source $config_file_path
     read -r -a SKIP_ARRAY <<< "$SKIP"
@@ -37,8 +34,6 @@ show_next () {
 
 show_previous () {
     clear
-    #config_file_path="$HOME/tip-of-the-day/config.sh"
-    config_file_path="config.sh"
 
     source $config_file_path
     read -r -a SKIP_ARRAY <<< "$SKIP"
