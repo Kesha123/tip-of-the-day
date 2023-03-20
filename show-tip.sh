@@ -77,58 +77,64 @@ is_left () {
     fi
 }
 
-
 clear
 
-if is_left; then
-    show_next $NEXT_TIP
+user=$(whoami)
+source $config_file_path
+read -r -a disabled_users <<< "$DISABLED_USERS"
+if [[ " ${disabled_users[*]} " =~ " ${user} " ]]; then
+    echo ""
 else
-    echo "No tips left. linuxtips -e to edit skipped tips."
-fi
-
-option=""
-
-while [ "$option" != "q" ]
-do
     if is_left; then
-        echo ""
+        show_next $NEXT_TIP
     else
         echo "No tips left. linuxtips -e to edit skipped tips."
     fi
 
-    read -p 'n: next; p: previous; s: skip forever; q: quit: ' option
-    case $option in
-        n)
-            show_next $NEXT_TIP;;
-        p)
-            if [ "$NEXT_TIP" -eq 1 ]; then
-                show_previous $(($TOTAL_TIPS - 1))
-            elif [ "$NEXT_TIP" -eq 2 ]; then
-                show_previous $TOTAL_TIPS
-            elif [ "$NEXT_TIP" -gt 2 ] && [ "$NEXT_TIP" -le $TOTAL_TIPS ]; then
-                show_previous $(($NEXT_TIP - 1))
-            fi;;
-        s)
-            if [ "$NEXT_TIP" -eq 1 ]; then
-                sed -i "/^SKIP=/ s/\"\([^']*\)\"/\"\1 10\"/" $config_file_path
-            else
-                sed -i "/^SKIP=/ s/\"\([^']*\)\"/\"\1 $(($NEXT_TIP - 1))\"/" $config_file_path
-            fi
-            source $config_file_path
-            read -r -a skipArray <<< "$SKIP"
-            sortedArray=($(echo "${skipArray[*]}" | tr ' ' '\n' | sort -n))
-            sortedString=$(echo "${sortedArray[*]}" | tr ' ' '\n' | paste -sd " " -)
-            sed -i "/^SKIP=/ s/\"\([^']*\)\"/\"${sortedString}\"/" $config_file_path
-            if is_left; then
-                show_next $NEXT_TIP
-            else
-                clear
-                echo "No tips left. linuxtips -e to edit skipped tips."
-            fi;;
-        q)
-            echo "";;
-        *)
-            echo  "unknown"
-            ;;
-    esac
-done
+    option=""
+
+    while [ "$option" != "q" ]
+    do
+        if is_left; then
+            echo ""
+        else
+            echo "No tips left. linuxtips -e to edit skipped tips."
+        fi
+
+        read -p 'n: next; p: previous; s: skip forever; q: quit: ' option
+        case $option in
+            n)
+                show_next $NEXT_TIP;;
+            p)
+                if [ "$NEXT_TIP" -eq 1 ]; then
+                    show_previous $(($TOTAL_TIPS - 1))
+                elif [ "$NEXT_TIP" -eq 2 ]; then
+                    show_previous $TOTAL_TIPS
+                elif [ "$NEXT_TIP" -gt 2 ] && [ "$NEXT_TIP" -le $TOTAL_TIPS ]; then
+                    show_previous $(($NEXT_TIP - 1))
+                fi;;
+            s)
+                if [ "$NEXT_TIP" -eq 1 ]; then
+                    sed -i "/^SKIP=/ s/\"\([^']*\)\"/\"\1 10\"/" $config_file_path
+                else
+                    sed -i "/^SKIP=/ s/\"\([^']*\)\"/\"\1 $(($NEXT_TIP - 1))\"/" $config_file_path
+                fi
+                source $config_file_path
+                read -r -a skipArray <<< "$SKIP"
+                sortedArray=($(echo "${skipArray[*]}" | tr ' ' '\n' | sort -n))
+                sortedString=$(echo "${sortedArray[*]}" | tr ' ' '\n' | paste -sd " " -)
+                sed -i "/^SKIP=/ s/\"\([^']*\)\"/\"${sortedString}\"/" $config_file_path
+                if is_left; then
+                    show_next $NEXT_TIP
+                else
+                    clear
+                    echo "No tips left. linuxtips -e to edit skipped tips."
+                fi;;
+            q)
+                echo "";;
+            *)
+                echo  "unknown"
+                ;;
+        esac
+    done
+fi
