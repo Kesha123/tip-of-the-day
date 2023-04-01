@@ -22,6 +22,11 @@ cp config.sh /etc/tip-of-the-day
 cp -r tips/ /var/
 ```
 
+## Set necessary permissions
+```
+chmod -R 777 /etc/tip-of-the-day
+```
+
 ### Configure script
 ```
 chmod +x show-tip.sh
