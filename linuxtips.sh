@@ -1,6 +1,6 @@
 #!/bin/bash
 
-config_file_path="$HOME/tip-of-the-day/config.sh"
+config_file_path="/etc/tip-of-the-day/config.sh"
 
 while getopts 'edoh:' OPTION; do
     case "$OPTION" in

@@ -17,7 +17,8 @@ chmod u+x linuxtips.sh
 
 ### Configure tips and configuration file
 ```
-mkdir /etc/linuxtips
+mkdir /etc/tip-of-the-day
+cp config.sh /etc/tip-of-the-day
 cp -r tips/ /var/
 ```
 
