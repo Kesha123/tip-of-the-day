@@ -83,7 +83,7 @@ user=$(whoami)
 source $config_file_path
 read -r -a disabled_users <<< "$DISABLED_USERS"
 if [[ " ${disabled_users[*]} " =~ " ${user} " ]]; then
-    echo ""
+    echo "TotD is disabled for $user user."
 else
     if is_left; then
         show_next $NEXT_TIP

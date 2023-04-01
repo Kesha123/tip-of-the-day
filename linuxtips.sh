@@ -5,7 +5,7 @@ config_file_path="/etc/tip-of-the-day/config.sh"
 while getopts 'edoh:' OPTION; do
     case "$OPTION" in
         e)
-            nano $HOME/tip-of-the-day/config.sh;;
+            nano $config_file_path;;
 
         d)
             user=$(whoami)
