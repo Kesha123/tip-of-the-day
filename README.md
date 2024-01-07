@@ -1,6 +1,6 @@
 # Tip of the Day
 
-A script that displays a different 'Tip of the Day' every time you enter the terminal on your own Linux host or establish an SSH connection with a remote Linux host. You can navigate forward and backward to read more tips. Yoser can disable this feature as they wish.
+A script that displays a different 'Tip of the Day' every time you enter the terminal on your own Linux host or establish an SSH connection with a remote Linux host. You can navigate forward and backward to read more tips. User can disable this feature as they wish.
 
 ## Instalation
 
