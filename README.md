@@ -1,12 +1,15 @@
 # Tip of the Day
 
-Script that displays a different "Tip of the day" every time when entering the terminal of your own Linux host or taking a SSH connection to your personal Linux host.
+A script that displays a different 'Tip of the Day' every time you enter the terminal on your own Linux host or establish an SSH connection with a remote Linux host. You can navigate forward and backward to read more tips. Yoser can disable this feature as they wish.
 
 ## Instalation
 
 ### Clone git repository
 ```
 git clone ssh://git@gitlab.tamk.cloud:1022/server-tech-2023-a-innokentii-kozlov/tip-of-the-day.git
+```
+
+```
 cd tip-of-the-day
 ```
 
